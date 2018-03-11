@@ -1,0 +1,109 @@
+
+
+input,
+textarea {
+
+            width: 700px;
+    font: 1em sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    border: 0.063em solid #999;
+    -moz-box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    border-color: blue;
+}
+
+/*   INSCRIPTION / CONNEXION   */
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button3 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button3:hover {
+    opacity: 0.8;
+}
+
+
+/*TOOL TIP W3S*/
+
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*                          PROGRESS BAR          */
+progress[value]{
+    align-self: center;
+    width: 140px;
+    height: 10px;
+    -ms-flex-item-align: center;
+}
+
+progress[value]::-webkit-progress-bar{
+    background-color: #eee;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+    background-image:
+	   -webkit-linear-gradient(-45deg, 
+	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
+	                           rgba(0,0, 0, .1) 66%, transparent 66%),
+        -webkit-linear-gradient(left, #09c, #4CAF50);
+        background-size: 35px 20px, 100% 100%, 100% 100%;
+        border-radius: 10px;
+        
+}
+
+

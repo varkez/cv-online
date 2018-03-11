@@ -1,0 +1,748 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/******************     HEADER     ******************/
+
+header {
+    position: relative;
+    z-index: 1;
+    padding: 1.250em;
+    padding-top: 0.125em;
+    padding-left: 3.125em;
+}
+header#animated{
+    
+    background: gray url(images/header.png) repeat 0 0;
+    -webkit-animation: slide 60s linear infinite;
+    -moz-animation: slide 60s linear infinite;
+}
+
+@-webkit-keyframes slide{
+    from { background-position: 0 0; }
+    to { background-position: -800px 0; }
+}
+
+#cv-name{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    margin-top: 1.5em;
+}
+
+div#cv-name>h1 {
+    font-size: 1.875em;
+}
+
+div#cv-name>h2 {
+    font-size: 1.250em;
+    margin-top: 0.313em;
+}
+
+button {
+    width: 9.063em;
+    font: bold 0.75em Verdana;
+    border-radius: 0.75em 0 0.75em 0;
+    background: #478bf9;
+    border: none;
+    color: #fff;
+    padding: 0.375em 0 0.375em 0;
+    margin: 0 0.5em 0 0.5em;
+    box-shadow: 0.063em 0.063em 0.063em #999;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-box-shadow: 0.063em 0.063em 0.063em #999;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/******************     MENU     ******************/
+
+nav#scrollBar {
+    background-color: lightgray;
+    width: 100%;
+/*    overflow: auto;*/
+    display: flex;
+    justify-content: space-between;
+    display: -ms-flexbox;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+}
+
+ul.menu-left{
+    display: flex;
+    list-style-type: none;
+    margin-left: 3.125em;
+    display: -ms-flexbox;
+}
+
+li.menu-item{
+    margin: auto;
+}
+
+li.menu-item a{
+    color: black;
+    font-size: 15px;
+    padding: 0.665em 5px 0.5em 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+li.menu-item a:hover{
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0.1em 0.01em 2px 1px #999;
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -webkit-box-shadow: 0.1em 0.01em 2px 1px #999;
+ 
+}
+/*Normalement Bouton ClicK (Scale grossissement négatif) */
+li.menu-item a:active{
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0.1em 0.01em 2px 1px #999;
+    transform: scale(0.98);
+    -webkit-transform: scale(0.98);
+    -webkit-box-shadow: 0.1em 0.01em 2px 1px #999;
+}
+
+
+li.menu-item a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0 0 5px 5px;
+    box-shadow: -1em 0.5em 3em 7px #999;
+    -webkit-box-shadow: -1em 0.5em 3em 7px #999;
+}
+
+ul.menu-right{
+    display: flex;
+    margin-right: 3.125em;
+    display: -ms-flexbox;
+}
+
+li.menu-icon {
+    list-style-type: none;
+    margin: auto;
+}
+
+/******************     navBarScrollDown     ******************/
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+/* Add some top padding to the page content to prevent sudden quick movement. when(position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px; /* :'S */
+}
+
+/******************     BODY->TEXT     ******************/
+
+#profil{
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;  
+}
+
+h3 {
+    text-align: left;
+    font-size: 1.063em;
+}
+
+h4 {
+    text-align: left;
+    font-size: 0.875em;
+    margin-bottom: -0.625em;
+}
+
+p {
+    text-align: justify;
+    font-size: 0.95em;
+}
+
+li {
+    padding: 0.125em;
+    border-radius: 0.313em;
+}
+
+/******************     BODY->COLUMN/CONTENT     ******************/
+
+#page-content {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 3.125em;
+    padding-right: 3.125em;
+    padding-top: 1.625em;
+    padding-bottom: 18em;
+    background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+    background: -webkit-linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -ms-flex-pack: distribute;
+}
+
+.column-left {
+    order: 1;
+    flex-grow: 0;
+    width: 12.5em;
+    height: 50em;
+    justify-content: flex-start;
+    align-content: center;
+    color: white;
+    margin-right: 0.625em;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    -ms-flex-line-pack: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+}
+
+.column-center {
+    order: 2;
+    flex-grow: 4;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    -webkit-box-flex: 4;
+    -ms-flex-positive: 4;
+}
+.column-right {
+    order: 3;  
+    flex-grow: 0;
+    width: 17.75em;
+    height: 50em;
+    margin-left: 0.625em;
+    justify-content: flex-start;
+    align-content: center;
+    color: white;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    -ms-flex-line-pack: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+}
+
+.content-left {
+    background: rgb(232, 232, 233);
+    color: black;
+    margin-top: 0.625em;
+    padding: 0.625em;
+    border-radius: 0.625em;
+    align-items: center;
+    box-shadow: 1px 1px 12px #555;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+}
+
+.content-center {
+    background: rgb(232, 232, 233);
+    color: black;
+    margin-top: 0.625em;
+    padding: 0.625em;
+    border-radius: 0.625em;
+    align-items: center;
+    box-shadow: 1px 1px 12px #555;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+}
+
+.content-right {
+    background: rgb(232, 232, 233);
+    color: black;
+    margin-top: 0.625em;
+    padding: 0.625em;
+    border-radius: 0.625em;
+    align-items: center;
+    box-shadow: 1px 1px 12px #555;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+}
+
+/******************     BODY->TITLE    ******************/
+
+#fc-title {
+    font-size: 2.425vw;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bolder;
+    text-align: center;
+    padding-bottom: 0.625em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.title2 {
+    padding-top: 0.313em;
+    padding-bottom: 0.313em;
+    font-size: 0.938em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.title3 {
+    font-size: 0.938em;
+    padding-bottom: 0.625em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/******************     BODY->COMPETENCES-TECHNIQUES     ******************/
+
+
+ul.ac {
+    list-style-type: none;
+}
+
+ul.ct li {
+    font-size: 0.938em;
+    margin: 0.063em;
+    text-decoration: none;
+    background: grey;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    display: -ms-flexbox;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+}
+
+ul.ct li span{
+    color: black;
+    font-style: oblique;
+    font-weight: bold;
+    display: flex;
+    align-self: flex-end;
+}
+
+progress[value]{
+    appearance: none;
+    align-self: center;
+    width: 140px;
+    height: 10px;
+    -ms-flex-item-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+progress[value]::-webkit-progress-bar{
+    background-color: #eee;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+    background-image:
+	   -webkit-linear-gradient(-45deg, 
+	                           transparent 33%, 
+                                rgba(0, 0, 0, .1) 33%, 
+	                           rgba(0,0, 0, .1) 66%,
+                                transparent 66%),
+        
+        -webkit-linear-gradient(top, 
+	                           rgba(255, 255, 255, .25), 
+	                           rgba(0, 0, 0, .25)),
+        
+        -webkit-linear-gradient(left, #09c, #4CAF50);
+    
+        background-size: 35px 20px, 100% 100%, 100% 100%;
+        border-radius: 10px;
+}
+
+
+
+/******************     FORMULAIRE     ******************/
+
+form {
+    margin: 0 auto;
+    width: 43.750em;
+    padding: 1em;
+    border: #CCC solid 0.063em;
+    border-radius: 1em;
+}
+
+form div + div {
+    margin-top: 1em;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 95%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    transition: all 0.1s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    background-color: #ddd;
+    outline: none;
+    border-color: blue;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+form div{
+    position: relative;
+}
+
+textarea + label, input + label {
+    position: absolute;
+    left: 300px;
+    font-family: 'Indie Flower', cursive;
+    transition: all 0.5s;
+}
+
+textarea:placeholder-shown + label, input:placeholder-shown + label{
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+textarea {
+    width: 95%;
+    vertical-align: top;
+    height: 10em;
+    resize: vertical;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/******************     PORTFOLIO     ******************/
+
+#title-portfolio {
+    font-size: 3.125em;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+#portfolio {
+    background: rgb(232, 232, 233);
+    color: black;
+    margin-top: 0.625em;
+    padding: 0.625em;
+    border-radius: 0.625em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    display: -ms-flexbox;
+    box-shadow: 1px 1px 12px #555;
+}
+
+#portfolio > article {
+    width: 26.25em;
+    height: 16.875em;
+    border-radius: 0.625em;
+    margin: 0.625em;
+}
+
+.overlay {
+    background: rgba(255, 255, 255, 0.7);
+    height: 100%;
+    width: 12.675em;
+    padding: 0.625em;
+    border-radius: 0.625em 0 0 0.625em;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.foliobtn {
+    color: #fff;
+    background-color: #ff7a00;
+    padding: 0.375em 1.250em;
+    border-radius: 0.188em;
+}
+
+.foliobtn:hover {
+    color: #fff;
+    background-color: #02b8dd;
+}
+
+
+/******************     FOOTER     ******************/
+
+footer {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #444;
+    padding: 1.250em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -ms-flex-wrap: nowrap;
+}
+
+#footer-text {
+    margin: auto;
+    color: white;
+}
+
+
+/******************     Inscription/Connexion     ******************/
+.connexion {
+    text-decoration: none;
+    float: right;
+    font-size: 1.25em;
+    margin: 0.5em 1.5em 0 0;
+}
+
+.connexion:hover {
+    color: black;
+}
+
+
+.cancelbtn,
+.signupbtn {
+    padding: 14px 20px;
+}
+
+.cancelbtn {
+    background-color: #f44336;
+    float: right;
+    width: 40%;
+}
+
+.signupbtn {
+    float: left;
+    width: 40%;
+}
+
+.container {
+    padding: 16px;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    border-radius: 50%;
+    width: 7em;
+    height: 7em;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: #888 solid 1px;
+}
+
+hr {
+    border: #f1f1f1 solid 1px;
+    margin-bottom: 25px;
+}
+
+.close {
+    float: right;
+    right: 25px;
+    top: 5px;
+    color: #f1f1f1;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width:300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn,
+    .signupbtn {
+        width: 100%;
+    }
+}
+
+
+/******************     ToolTip     ******************/
+
+
+[tags] {
+    position:relative;
+}
+
+[tags]:hover:after {
+    content: attr(tags);
+    color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /*Location tooltip*/
+    position: absolute;
+    z-index: 99;
+    left: 4%;
+    bottom: 100%;
+    margin-bottom: 18px;
+/*    margin-left: -30px;*/
+    /*color background tooltip*/
+    background: #333;
+    background: rgba(0,0,0,.7);
+    /*form tooltip*/
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+[tags]:hover:before {
+    /*Arrow tooltip*/
+    content: "";
+    border: solid;
+    border-color: rgba(0, 0, 0, .7) transparent;
+    border-width: 8px 8px 0px 8px; /*0px = Arrow Head*/
+    /*Arrow position*/
+    top: -18px;
+    left: 15%;
+    position: absolute;
+    z-index: 99;
+}
+
+/******************     Font Face     ******************/
+
+@font-face {
+    font-family: "'Montserrat'";
+    font-style: normal;
+    font-weight: 200;
+    src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url(https://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_aZA3gnD-w.ttf) format('truetype');
+}
+
+@font-face {
+
+    font-family: "'Cabin'";
+    font-style: normal;
+    font-weight: 400;
+    src: local('Cabin'), local('Cabin-Regular'), url(https://fonts.gstatic.com/s/cabin/v12/u-4x0qWljRw-Pd8w__g.ttf) format('truetype');
+}
+
+@font-face {
+
+    font-family: "'Josefin Sans'";
+    font-style: normal;
+    font-weight: 400;
+    src: local('Josefin Sans Regular'), local('JosefinSans-Regular'), url(https://fonts.gstatic.com/s/josefinsans/v12/Qw3aZQNVED7rKGKxtqIqX5EUDXx9.ttf) format('truetype');
+
+}
+
+@font-face {
+
+    font-family: "'Indie Flower'";
+    font-style: normal;
+    font-weight: 400;
+    src: local('Indie Flower'), local('IndieFlower'), url(https://fonts.gstatic.com/s/indieflower/v9/m8JVjfNVeKWVnh3QMuKkFcZVaUuC.ttf) format('truetype');
+
+}
+
+@font-face {
+
+    font-family: "'Ubuntu'";
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(https://fonts.gstatic.com/s/ubuntu/v11/4iCs6KVjbNBYlgoKfw7z.ttf) format('truetype');
+
+}
