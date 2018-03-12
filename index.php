@@ -24,16 +24,18 @@
                     Expériences Professionnelles
                 </h2>
                 <article class="content-center">
-                    <h3>Janvier 2018 - Février 2018 : Formation Graine de boss</h3>
+                    <h3>Janvier 2018 - Février 2018 : Formation Graine de boss :: 300h</h3>
                     <h4>Ecole Epsi/Wis</h4>
                     <br>
-                    <p></p>
+                    <p>Définir un cahier des Charges, Business plan, Plannification de projet(WBS, GANTT, SMART, OBS),<br> Marquetter une application, InBound/OutBound Marketing, Phylosophie Agile, Kanban, AdWords, Outils SEO.</p><br>
+                    <h4>Programmation :</h4><br>
+                    <p>Html/Css, PHP/POO, mySQL, Symfony, Twig, vue.js, Android Studio.</p>
                 </article>
                 <article class="content-center">
-                    <h3>Septembre 2018 : Piscine Ecole 101</h3>
-                    <h4></h4>
+                    <h3>Septembre 2018 : Piscine Ecole 101 :: +250h</h3>
+                    <h4>Partenaire Ecole 42 Paris</h4>
                     <br>
-                    <p></p>
+                    <p>Commande unix, Principalement dut Langage C</p>
                 </article>
                 <article class="content-center">
                     <h3>Experiences Professionnelles - Ouvrier du Bâtiment</h3>
@@ -98,34 +100,38 @@
                         <li>Html/Css<span>50%<progress value="50" max="100"/></span></li>
                         <li>Php<span>30%<progress value="30" max="100"/></span></li>
                         <li>MySQL<span>30%<progress value="30" max="100"/></span></li>
+                        <li>JavaScript<span>20%<progress value="20" max="100"/></span></li>
                         <li>Wordpress<span>50%<progress value="50" max="100"/></span></li>
                         <li>GitHub<span>40%<progress value="40" max="100"/></span></li>
                         <li>Unix<span>40%<progress value="40" max="100"/></span></li>
-                        <h3 class="title2">En devenir</h3>
-                        <li>Symfony</li>
-                        <li>Javascript</li>
+                        <h3 class="title2">En devenir ?</h3>
+                        <li>Angular.js (Knockout.js, Ember.js)</li>
+                        <li>React.js (Symfony, Node.js)</li>
+                        <h3 class="title2">Autres Compétences</h3>
+                        <li>Elegent Themes Divi 3.0</li>
                     </ul>
                 </div>
                 <div class="content-right">
-                    <h3>Autres Compétences</h3>
+                    <h3>Première Approche</h3>
                     <br>
                     <ul class="ac">
+                        <li>Symfony</li>
                         <li>Phylosophie Agile</li>
-                        <li>WampServer</li>
-                        <li>Divi 3.0</li>
+                        <li>Android Studio</li>
                         <li>Vue.js</li>
+                        <li>Seo</li>
                     </ul>
                 </div>
                 <div class="content-right">
                     <h3>Logiciels</h3>
                     <br>
                     <ul class="ac">
-                        <li>Sublime Text</li>
-                        <li>Brakets</li>
+                        <li>Vim, Sublime Text, Brakets</li>
                         <li>MySQL Workbench</li>
-                        <li>FileZilla, PuTTY</li>
+                        <li>FileZilla</li>
+                        <li>PuTTY</li>
+                        <li>WampServeur</li>
                         <li>Adobe XD CC</li>
-                        <li>Android Studio</li>
                     </ul>
                 </div>
                 <div class="content-right">

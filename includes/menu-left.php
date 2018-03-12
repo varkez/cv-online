@@ -12,7 +12,19 @@
     <div class="content-left">
         <h3>Contact</h3>
         <br>
-        <p>Formulaire de Contact</p>
+        <ul class="icon-contact">
+            <li class="menu-icon">
+                
+                <a tags="cariou.franck@gmail.com" href="mailto:cariou.franck@gmail.com"><img src="images/letter.svg" alt="#" style="width: 25px; height: 25px";/></a>
+            </li>
+            <li class="menu-icon">
+                <a tags="06.22.22.33.33" href="#"> <img src="images/phone.svg" alt="#" style="width: 25px; height: 25px";/></a>
+            </li>
+            
+            <li class="menu-icon">
+                <a tags="grover1@outlook.fr" href="skype:live:grover1_9?call"> <img src="images/skype.svg" alt="#" style="width: 25px; height: 25px";/></a>
+            </li>
+        </ul>
     </div>
     <div class="content-left">
         <h3>Présentation</h3>

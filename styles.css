@@ -144,10 +144,11 @@ li.menu-icon {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 2;
 }
 /* Add some top padding to the page content to prevent sudden quick movement. when(position:fixed and top:0) */
 .sticky + .content {
-    padding-top: 60px; /* :'S */
+    padding-top: 60px; /* :'S Chrome */
 }
 
 /******************     BODY->TEXT     ******************/
@@ -158,6 +159,12 @@ li.menu-icon {
     margin-left: auto;
     margin-right: auto;
     width: 100%;  
+}
+
+ul.icon-contact {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
 }
 
 h3 {
@@ -189,7 +196,7 @@ li {
     padding-left: 3.125em;
     padding-right: 3.125em;
     padding-top: 1.625em;
-    padding-bottom: 18em;
+    padding-bottom: 25em;
     background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
     background: -webkit-linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
     display: -webkit-box;
@@ -324,7 +331,7 @@ ul.ct li {
     -ms-flex-pack: justify;
 }
 
-ul.ct li span{
+ul.ct li span {
     color: black;
     font-style: oblique;
     font-weight: bold;
@@ -332,7 +339,7 @@ ul.ct li span{
     align-self: flex-end;
 }
 
-progress[value]{
+progress[value] {
     appearance: none;
     align-self: center;
     width: 140px;
@@ -340,31 +347,55 @@ progress[value]{
     -ms-flex-item-align: center;
     -webkit-appearance: none;
     -moz-appearance: none;
-}
-
-progress[value]::-webkit-progress-bar{
+    /* progress BAR only for  Mozilla */
     background-color: #eee;
     border-radius: 10px;
-    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
 
+/* progress VALUE only for Mozilla */
+progress[value]::-moz-progress-bar {
+    background-image: 
+    -moz-linear-gradient(-45deg,
+                        transparent 33%,
+                        rgba(0, 0, 0, .1) 33%,
+                        rgba(0, 0, 0, .1) 66%,
+                        transparent 66%),
+
+    -moz-linear-gradient(top,
+                        rgba(255, 255, 255, .25),
+                        rgba(0, 0, 0, .25)),
+
+    -moz-linear-gradient(left, #09c, #4CAF50);
+
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius: 10px;
+}
+/* progress Value, Bar for Opera and Chrome */
+
 progress[value]::-webkit-progress-value {
-    background-image:
-	   -webkit-linear-gradient(-45deg, 
-	                           transparent 33%, 
-                                rgba(0, 0, 0, .1) 33%, 
-	                           rgba(0,0, 0, .1) 66%,
-                                transparent 66%),
-        
-        -webkit-linear-gradient(top, 
-	                           rgba(255, 255, 255, .25), 
-	                           rgba(0, 0, 0, .25)),
-        
-        -webkit-linear-gradient(left, #09c, #4CAF50);
-    
-        background-size: 35px 20px, 100% 100%, 100% 100%;
-        border-radius: 10px;
+    background-image: 
+    -webkit-linear-gradient(-45deg,
+                            transparent 33%,
+                            rgba(0, 0, 0, .1) 33%,
+                            rgba(0, 0, 0, .1) 66%,
+                            transparent 66%),
+
+    -webkit-repeating-linear-gradient(top,
+                            rgba(255, 255, 255, .25),
+                            rgba(0, 0, 0, .25)),
+
+    -webkit-repeating-linear-gradient(left, #09c, #4CAF50);
+
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius: 10px;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
 
 
@@ -482,6 +513,8 @@ textarea {
     height: 16.875em;
     border-radius: 0.625em;
     margin: 0.625em;
+    box-shadow: 1px 1px 12px #555;
+    -webkit-box-shadow: 1px 1px 12px #555;
 }
 
 .overlay {
@@ -491,8 +524,16 @@ textarea {
     padding: 0.625em;
     border-radius: 0.625em 0 0 0.625em;
     text-align: center;
+    font-size: 1.05em;
+    font-family: "josefin sans";
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
+   
+    
+}
+
+.overlay > h4{
+    text-align: center;
 }
 
 .foliobtn {
@@ -500,12 +541,15 @@ textarea {
     background-color: #ff7a00;
     padding: 0.375em 1.250em;
     border-radius: 0.188em;
+    
 }
 
 .foliobtn:hover {
     color: #fff;
     background-color: #02b8dd;
 }
+
+
 
 
 /******************     FOOTER     ******************/
@@ -667,6 +711,7 @@ hr {
 
 [tags] {
     position:relative;
+    z-index: 1;
 }
 
 [tags]:hover:after {
@@ -676,8 +721,8 @@ hr {
     text-overflow: ellipsis;
     /*Location tooltip*/
     position: absolute;
-    z-index: 99;
-    left: 4%;
+    z-index: 1;
+    left: 2%;
     bottom: 100%;
     margin-bottom: 18px;
 /*    margin-left: -30px;*/
@@ -700,7 +745,7 @@ hr {
     top: -18px;
     left: 15%;
     position: absolute;
-    z-index: 99;
+    z-index: 1;
 }
 
 /******************     Font Face     ******************/
@@ -746,3 +791,4 @@ hr {
     src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(https://fonts.gstatic.com/s/ubuntu/v11/4iCs6KVjbNBYlgoKfw7z.ttf) format('truetype');
 
 }
+

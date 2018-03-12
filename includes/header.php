@@ -74,7 +74,7 @@
                 <a target="_blank" href="protected/franck-cariou-cv.pdf">
                     <button type="submit" formtarget="_blank" value="Télécharger">Afficher CV</button>
                 </a>
-
+            </li>
                 <!--
             //Protected Method
             <form action="" type="button" method="post" name="downloadcv" value="Télécharger">
@@ -83,9 +83,6 @@
 -->
     </ul>
 </nav>
-    
 
 <?php include('includes/inscription.php'); ?>
-<?php include('includes/connexion.php'); ?>
 <?php include('includes/navBarScrollDown.php'); ?>
-<?php include('includes/bdd-downloadcv.php'); ?>
